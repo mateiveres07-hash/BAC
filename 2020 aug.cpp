@@ -46,3 +46,24 @@ citește n (număr natural)
 ┌dacă m=0 atunci scrie ‘DA’
 │altfel scrie m, ‘NU’
 └■
+
+2.
+struct procesor{
+	char producator;
+	int frecventa;
+	float pret;
+}p[20];
+
+3.
+int aux;
+for(int i=1;i<=n;i++){
+	for(int j=1;j<=m;j++){
+		if(a[i][3]%2==0){
+			if(a[i][3]>a[i+1][3]){
+				aux=a[i][3];
+				a[i][3]=a[i+1][3];
+				a[i+1][3]=aux;
+			}
+		}		
+	}
+}
