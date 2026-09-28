@@ -67,3 +67,37 @@ for(int i=1;i<=n;i++){
 		}		
 	}
 }
+
+sb 3
+1.
+#include <iostream>
+using namespace std;
+int div(int x){
+    int s=0;
+    for(int d=1;d*d<=x;d++){
+         if(x%d==0){
+            s=s+d;
+            if(d!=x/d){
+                s=s+x/d;
+            }
+        }
+    }
+    return s;
+}
+int kpn(int a, int b, int k){
+    int cnt=0;
+    for(int i=a;i<=b;i++){
+        if(i%2==div(i)%2){
+            cnt++;
+            if(cnt==k){
+            return i;
+            }
+        }
+    }
+    return -1;
+}
+int main() 
+{
+    cout<<kpn(27,50,3);
+    return 0;
+}
