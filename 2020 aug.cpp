@@ -101,3 +101,62 @@ int main()
     cout<<kpn(27,50,3);
     return 0;
 }
+
+2.
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main() 
+{
+    char s[101],aux[101]=" ",*p;
+    int lungime,ok=0;
+    cin.getline(s,101);
+    p=strtok(s," ");
+    while(p){
+        lungime=strlen(p);
+        if(lungime%2!=0){
+            ok++;
+            for(int i=0;i<lungime/2;i++){
+                char a=p[i];
+                p[i]=p[lungime-i-1];
+                p[lungime-i-1]=a;
+            }
+        }
+        strcat(aux,p);
+        strcat(aux," ");
+        p=strtok(NULL," ");
+    }
+    strcpy(s,aux);
+    if(ok==0)
+        cout<<"nu exista";
+    else
+        cout<<s;
+    return 0;
+}
+
+3.
+#include <iostream>
+#include <fstream>
+using namespace std;
+ifstream in("bac.txt");
+int main() 
+{
+    int x,minn=99999999,maxx=-1,ok=0;
+    while(in>>x){
+        if(x>=10 && x<=99){
+            ok++;
+            if(x<minn){
+                minn=x;
+            }
+            if(x>maxx){
+                maxx=x;
+            }
+        }
+    }
+    if(ok==0)
+        cout<<"nu exista";
+    else 
+        cout<<minn-1<<" "<<maxx+1;
+    return 0;
+}
