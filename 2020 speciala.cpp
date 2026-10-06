@@ -62,3 +62,43 @@ for(i=0;i<7;i++){
 	}
  }
 }
+
+sb 3
+1.
+
+2.
+
+3.
+#include <iostream>
+#include <fstream>
+using namespace std;
+ifstream in("bac.in");
+
+int main()
+{
+    int x,y,z,dif=0,minn=999999999,vf=-1;
+    in>>x>>y;
+    while(in>>z){
+        if(y>x && y>z){
+            dif=x-z;
+            if(dif<0){
+                dif=-dif;
+            }
+            if(dif<minn){
+                minn=dif;
+                vf=y;
+            }
+            else{
+                if(dif==minn && y>vf){
+                    vf=y;
+                } 
+            }
+        }
+        x=y;
+        y=z;
+    }
+    if(vf==-1) cout<<"nu exista";
+    else cout<<vf;
+    
+    return 0;
+}
