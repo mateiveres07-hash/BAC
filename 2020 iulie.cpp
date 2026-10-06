@@ -112,7 +112,7 @@ int main()
 #include <iostream>
 #include <fstream>
 using namespace std;
-ifstream in("bac.txt");
+ifstream in("bac.in");
 
 int main()
 {
