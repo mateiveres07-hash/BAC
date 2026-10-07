@@ -38,6 +38,44 @@ struct calculator{
 	}memorie;	
 }c;
 
+2.
+	#include <iostream>
+#include <cstring>
+using namespace std;
+void transforma( char s[], char t[])
+{
+    char st[101]= {},dr[101]= {};
+    st[0]=s[0];
+    strcpy(dr,s+1);
+    strcat(dr,st);
+    strcpy(t,dr);
+}
+int main()
+{
+    char s[101],cuv[101],sol[101]= {},*p,cnt=0;
+    cin.getline(s,101);
+    p=strtok(s," ");
+    while(p!=NULL)
+    {
+        if(strlen(p)>=3)
+        {
+            transforma(p,cuv);
+            cnt++;
+        }
+        else
+        {
+            strcpy(cuv,p);
+        }
+        strcat(sol,cuv);
+        strcat(sol," ");
+        p=strtok(NULL," ");
+    }
+    if(cnt>=1)
+        cout<<sol;
+    else cout<<"nu exista";
+    return 0;
+}
+
 3.
 for(i=0;i<9;i++){
  for(j=0;j<9;j++){
