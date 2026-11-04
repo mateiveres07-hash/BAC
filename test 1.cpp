@@ -4,6 +4,7 @@ sb 1
 3.b
 4.b
 5.c
+
 sb 2
 1.
 a)
@@ -11,21 +12,28 @@ n=12345
 p=1, m=0, k=0
 x=780 -> x=780, x!=0 -> c=0
 m=0*1+0=0, n=1234, p=10, k=1
+
 x=921 -> x=92, x!=0 -> c=2
 m=2*10+0=20, n=123, p=100, k=2
+
 x=4013 -> x=40, x!=0 -> c=0
 m=0*100+20=20, n=12, p=1000, k=3
+
 x=75 -> x=0, x==0 -> c=n%10=2
 m=2*1000+20=2020, n=1, p=10000, k=4
+
 x=100214 -> x=10, x!=0 -> c=0
 m=0*10000+2020=2020, n=0, p=100000, k=5
+
 se afiseaza 2020
 b)
 49 0
 49 1
+
 c)
-#include <iostream>
+#include 
 using namespace std;
+
 int main() {
 unsigned int n, p = 1, m = 0, k = 0, x, c, aux;
 cin >> n;
@@ -67,11 +75,18 @@ p<-1; m<-0; k<-0
 │ k<-k+1
 └■
 scrie m
+
+2.
+
 struct punct {
 float x, y;
 };
 struct triunghi {
 punct A, B, C;
 } t;
+
+3.
+
 10 10
 ViCTorIE
+
